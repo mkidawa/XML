@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+music_set{
+	background-image: url("pipes.png");
+	color: #0e0101;
+	margin: auto; 
+	
+}
+
+artists, genres
+{
+    display: none;
+}
+
+nagłówek
+{
+	font-size: 42px;
+	font-family: fantasy;
+	display: block;
+	text-align: center;
+	margin: auto;
+	background:rgba(185, 185, 185, 0.747);
+}
+
+nagłówek > author
+{	
+	margin-top: 10px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+}
+
+music_set > subject
+{
+	font-size: 25px;
+	color: #0e0101;
+	font-family: fantasy;
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+	padding: 8px
+}
+
+owned_albums
+{	width: 100%;
+	margin: auto;
+	color: #ffffff;
+	display: block;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+CD:first-of-type
+{
+	margin-top: 0px;
+}
+
+CD
+{
+	display: grid;
+	text-align: inherit;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+CD::before
+{
+	content: "Wykonawca: " 
+	attr(artist_id)
+	", gatunek: " 
+	attr(genre_id);
+	text-align: center  ;
+	background-color: #0e0101;
+	display: block;
+	font-size: 25px;
+	padding: 10px;
+}
+CD:hover::before
+{
+	background-color: #5f5f5f;
+}
+
+CD > title
+{
+	text-align: center;
+	font-size: 40px;
+}
+
+CD > nr_of_songs, album_length
+{
+	text-align: center;
+	font-size: 30px;
+}
+
+release_dates
+{
+	margin-top: 5px;	
+	text-align: center;
+	font-size: 30px;
+}
+
+release_date:nth-child(1)::before
+{
+	font-size: 25px;
+	content: "Data wydania "url('eng.jpg')" : ";
+	margin-right: 10px;
+}
+
+release_date:nth-child(2)::before
+{
+	font-size: 25px;
+	content: "Data wydania "url('pl.jpg')" : ";
+	margin-right: 10px;
+}
+
+release_date:nth-child(3)::before
+{
+	font-size: 25px;
+	content: "Data wydania "url('ger.jpg')" : ";
+	margin-right: 10px;
+}
+
+release_date:nth-child(4)::before
+{
+	font-size: 25px;
+	content: "Data wydania "url('usa.jpg')" : ";
+	margin-right: 10px;
+}
+
+CD:nth-child(odd) {
+    background: rgba(93, 107, 119, 0.884);
+}
+
+CD:nth-child(even) {
+    background: rgba(75, 82, 110, 0.884);
+}
+
+nr_of_songs::before
+{
+	content: "Liczba utworów: "
+}
+
+album_length::before
+{
+	content: "Długość płyty: "
+}
+
+album_length::after
+{
+	content: " minut."
+}
+
+songs
+{
+	font-size: 30px;
+}
+
+songs > song { 
+    display: list-item;
+    list-style: decimal;
+	margin-left: 70px;
+}
+
+songs > song > *:hover
+{
+	color: black;
+}
+
+song > song_length
+{
+	margin-right: 40px;
+	float: right;   
+}
+
+prices
+{
+	font-size: 25px;
+	padding-left: 13px;
+	display: grid;
+	margin-top: 15px;
+}
+
+price:nth-child(1)::before
+{
+	font-size: 25px;
+	content: "Cena "url('eng.jpg')" : ";
+	margin-right: 10px;
+}
+
+price:nth-child(1)::after
+{
+	content: attr(currency);
+}
+
+price:nth-child(2)::before
+{
+	
+	font-size: 25px;
+	content: "Cena "url('pl.jpg')" : ";
+	margin-right: 10px;
+}
+
+price:nth-child(2)::after
+{
+	content: attr(currency);
+}
+
+price:nth-child(3)::before
+{
+	
+	font-size: 25px;
+	content: "Cena "url('ger.jpg')" : ";
+	margin-right: 10px;
+}
+
+price:nth-child(3)::after
+{
+	content: attr(currency);
+}
+
+price:nth-child(4)::before
+{
+	
+	font-size: 25px;
+	content: "Cena "url('usa.jpg')" : ";
+	margin-right: 10px;
+}
+
+price:nth-child(4)::after
+{
+	content: attr(currency);
+}
+
+metacritics
+{
+	font-size: 25px;
+	padding-left: 13px;
+	margin-top: 15px;
+	margin-bottom: 7.5px;
+}
+
+metacritics::before
+{
+	content: "Ocena na serwisie Metacritic: ";
+}
+
+publisher
+{
+	font-size: 25px;
+	padding-left: 13px;
+	margin-top: 7.5px;
+	margin-bottom: 15px;
+}
+
+publisher::before
+{
+	content: "Wydawca: ";
+}

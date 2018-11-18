@@ -1,0 +1,32 @@
+<!ELEMENT music_set (nagłówek,genres,artists,owned_albums)>
+		<!ELEMENT nagłówek (project_name,author*,subject)>
+		<!ELEMENT project_name (#PCDATA)>
+		<!ELEMENT author (#PCDATA)>
+		<!ELEMENT subject (#PCDATA)>
+		<!ELEMENT genres (genre)*>
+		<!ELEMENT genre (#PCDATA)>
+		<!ATTLIST genre genre_id ID #REQUIRED>
+		<!ELEMENT artists (artist+)>
+		<!ELEMENT artist (#PCDATA)>
+		<!ATTLIST artist artist_id ID #REQUIRED>
+		<!ELEMENT owned_albums (CD*)>
+		<!ELEMENT CD (title,release_dates,nr_of_songs,album_length,songs,prices,metacritics,publisher)>
+		<!ATTLIST CD artist_id IDREF #REQUIRED>
+		<!ATTLIST CD genre_id IDREF #REQUIRED>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT release_dates (release_date)+>
+		<!ELEMENT release_date (#PCDATA)>
+		<!ATTLIST release_date
+				nation CDATA #REQUIRED>
+		<!ELEMENT nr_of_songs (#PCDATA)>
+		<!ELEMENT album_length (#PCDATA)>
+		<!ELEMENT songs (song)*>
+		<!ELEMENT song (name,song_length)>
+		<!ELEMENT name (#PCDATA)>
+		<!ELEMENT song_length (#PCDATA)>
+		<!ELEMENT prices (price+)>
+		<!ELEMENT price (#PCDATA)>
+		<!ATTLIST price
+				currency CDATA #REQUIRED>
+		<!ELEMENT metacritics (#PCDATA)>
+		<!ELEMENT publisher (#PCDATA)>
