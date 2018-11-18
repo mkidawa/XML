@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="music_set.css"?>
+<music_set
+		xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+		xs:schemaLocation="muzyka music_set.xsd"
+		xmlns="muzyka">
+<!--Pierwsza sekcja -->
+<!--Informacje o autorach -->				
+		<header>
+			<project_name>Biblioteka płyt muzycznych</project_name>
+			<author >Michał Kidawa</author>
+			<author >Jakub Szubka</author>
+			<index>216796</index>
+			<index>216790</index>
+			<subject>Technologie XML</subject>
+		</header>
+<!--Baza gatunków -->		
+		<genres>
+			<genre genre_id="rap">Rap</genre>
+			<genre genre_id="rock">Rock</genre>
+			<genre genre_id="funk">Funk</genre>
+			<genre genre_id="blues">Blues</genre>
+			<genre genre_id="jazz">Jazz</genre>
+			<genre genre_id="metal">Metal</genre>
+		</genres>
+<!--Baza artystów -->		
+		<artists>
+			<artist artist_id ="RollingStones">Rolling Stones</artist>
+			<artist artist_id ="BlackSabbath">Black Sabbath</artist>
+			<artist artist_id ="ChuckBerry">Chuck Berry</artist>
+			<artist artist_id ="JudasPriest">Judas Priest</artist>
+			<artist artist_id ="TheBeatles">The Beatles</artist>
+			<artist artist_id ="Eminem">Eminem</artist>
+			<artist artist_id ="LittleBig">Little Big</artist>
+		</artists>		
+<!--Druga sekcja -->		
+<!--Nasze albumy muzyczne -->
+		<owned_albums>
+			<CD artist_id="RollingStones" genre_id="rock">
+				<title>	
+					Let it Bleed
+				</title>
+				
+				<release_dates>
+					<release_date nation="ENG">1998-12-03</release_date>
+					<release_date nation="PL">1999-02-15</release_date>
+					<release_date nation="DE">1998-12-05</release_date>
+					<release_date nation="USA">1998-12-03</release_date>
+				</release_dates>
+				
+				<nr_of_songs>	
+					9
+				</nr_of_songs>
+				
+				<album_length>
+					00:42:21
+				</album_length>
+				
+				<songs>
+					<song>
+						<name>Gimme Shelter</name>
+						<song_length>00:04:31</song_length>
+					</song>
+					<song>
+						<name>Love in Vain</name>
+						<song_length>00:04:19</song_length>
+					</song>
+					<song>
+						<name>Country Honk</name>
+						<song_length>00:03:09</song_length>
+					</song>
+					<song>
+						<name>Live with Me</name>
+						<song_length>00:03:33</song_length>
+					</song>
+					<song>
+						<name>Let it Bleed</name>
+						<song_length>00:05:26</song_length>
+					</song>
+					<song>
+						<name>Midnight Rambler</name>
+						<song_length>00:06:52</song_length>
+					</song>
+					<song>
+						<name>You Got the Silver</name>
+						<song_length>00:02:51</song_length>
+					</song>
+					<song>
+						<name>Monkey Man</name>
+						<song_length>00:04:12</song_length>
+					</song>
+					<song>
+						<name>You Can't Always Get What You Want</name>
+						<song_length>00:07:28</song_length>
+					</song>
+				</songs>
+				
+				<prices>
+					<price currency="GBP">8</price>
+					<price currency="PLN">40</price>
+					<price currency="EURO">10</price>
+					<price currency="DOLLAR">13.5</price>
+				</prices>
+				
+				<metacritics>	
+					91
+				</metacritics>
+				
+				<publisher>	
+					Olympic Studios
+				</publisher>
+			</CD>
+
+			<CD artist_id="Eminem" genre_id="rap">
+				
+				<title>	
+					Kamikaze
+				</title>
+				
+				<release_dates>
+					<release_date nation="ENG">2018-09-17</release_date>
+					<release_date nation="PL">2018-09-19</release_date>
+					<release_date nation="DE">2018-09-17</release_date>
+					<release_date nation="USA">2018-09-23</release_date>
+				</release_dates>
+				
+				<nr_of_songs>	
+					13
+				</nr_of_songs>
+				
+				<album_length>
+					00:45:49
+				</album_length>
+				
+				<songs>
+					<song>
+						<name>The Ringer</name>
+						<song_length>00:05:37</song_length>
+					</song>
+					<song>
+						<name>Greatest</name>
+						<song_length>00:03:46</song_length>
+					</song>
+					<song>
+						<name>Lucky You</name>
+						<song_length>00:04:04</song_length>
+					</song>
+					<song>
+						<name>Paul</name>
+						<song_length>00:00:35</song_length>
+					</song>
+					<song>
+						<name>Normal</name>
+						<song_length>00:03:42</song_length>
+					</song>
+					<song>
+						<name>Em Calls Paul</name>
+						<song_length>00:00:49</song_length>
+					</song>
+					<song>
+						<name>Stepping Stone</name>
+						<song_length>00:05:09</song_length>
+					</song>
+					<song>
+						<name>Not Alike</name>
+						<song_length>00:04:48</song_length>
+					</song>
+					<song>
+						<name>Kamikaze</name>
+						<song_length>00:03:36</song_length>
+					</song>
+					<song>
+						<name>Fall</name>
+						<song_length>00:03:36</song_length>
+					</song>
+					<song>
+						<name>Nice Guy</name>
+						<song_length>00:02:30</song_length>
+					</song>
+					<song>
+						<name>Good Guy</name>
+						<song_length>00:02:22</song_length>
+					</song>
+					<song>
+						<name>Venom</name>
+						<song_length>00:04:29</song_length>
+					</song>
+				</songs>
+				
+				<prices>
+					<price currency="GBP">10</price>
+					<price currency="PLN">48</price>
+					<price currency="EURO">15</price>
+					<price currency="DOLLAR">15</price>
+				</prices>
+				
+				<metacritics>	
+					62
+				</metacritics>
+				
+				<publisher>	
+					Aftermath
+				</publisher>
+			</CD>
+
+			<CD artist_id="JudasPriest" genre_id="metal">
+				
+				<title>	
+					British Steel
+				</title>
+				
+				<release_dates>
+					<release_date nation="ENG">1980-05-23</release_date>
+					<release_date nation="PL">1985-07-30</release_date>
+					<release_date nation="DE">1980-05-24</release_date>
+					<release_date nation="USA">1980-07-14</release_date>
+				</release_dates>
+				
+				<nr_of_songs>	
+					9
+				</nr_of_songs>
+				
+				<album_length>
+					00:36:10
+				</album_length>
+				
+				<songs>
+					<song>
+						<name>Rapid Fire</name>
+						<song_length>00:04:08</song_length>
+					</song>
+					<song>
+						<name>Metal Gods</name>
+						<song_length>00:04:00</song_length>
+					</song>
+					<song>
+						<name>Breaking the Law</name>
+						<song_length>00:02:35</song_length>
+					</song>
+					<song>
+						<name>Grinder</name>
+						<song_length>00:03:58</song_length>
+					</song>
+					<song>
+						<name>United</name>
+						<song_length>00:03:35</song_length>
+					</song>
+					<song>
+						<name>You Don't Have to Be Old to Be Wise</name>
+						<song_length>00:05:04</song_length>
+					</song>
+					<song>
+						<name>Living After Midnight</name>
+						<song_length>00:03:31</song_length>
+					</song>
+					<song>
+						<name>The Rage</name>
+						<song_length>00:04:44</song_length>
+					</song>
+					<song>
+						<name>Steeler</name>
+						<song_length>00:04:30</song_length>
+					</song>
+				</songs>
+				
+				<prices>
+					<price currency="GBP">5.50</price>
+					<price currency="PLN">25.34</price>
+					<price currency="EURO">6.5</price>
+					<price currency="DOLLAR">8.0</price>
+				</prices>
+				
+				<metacritics>	
+					87
+				</metacritics>
+				
+				<publisher>	
+					Columbia Records
+				</publisher>
+			</CD>
+		</owned_albums>
+</music_set>

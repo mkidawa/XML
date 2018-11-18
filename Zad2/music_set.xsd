@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="muzyka"
+           elementFormDefault="qualified"
+           xmlns:muza="muzyka">
+
+    <xs:element type="muza:music_setType" name="music_set">
+
+        <xs:key name="key_genreID">
+            <xs:selector xpath="./muza:genres/muza:genre"/>
+            <xs:field xpath="@genre_id"/>
+        </xs:key>
+
+        <xs:key name="key_artist_ID">
+            <xs:selector xpath="./muza:artists/muza:artist"/>
+            <xs:field xpath="@artist_id"/>
+        </xs:key>
+
+        <xs:keyref name="keyref_genre" refer="muza:key_genreID">
+            <xs:selector xpath="./muza:owned_albums/muza:CD"/>
+            <xs:field xpath="@genre_id"/>
+        </xs:keyref>
+
+        <xs:keyref name="keyref_artist" refer="muza:key_artist_ID">
+            <xs:selector xpath="./muza:owned_albums/muza:CD"/>
+            <xs:field xpath="@artist_id"/>
+        </xs:keyref>
+    </xs:element>
+
+
+    <xs:complexType name="music_setType">
+        <xs:sequence>
+            <xs:element type="muza:headerTyp" name="header"/>
+            <xs:element type="muza:genresTyp" name="genres"/>
+            <xs:element type="muza:artistsTyp" name="artists"/>
+            <xs:element type="muza:owned_albumsTyp" name="owned_albums"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="headerTyp">
+        <xs:sequence>
+            <xs:group ref="muza:header_grp"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="header_grp">
+        <xs:sequence>
+            <xs:element name="project_name" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="author" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="index" maxOccurs="unbounded">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value="([1-9][0-9][0-9][0-9][0-9][0-9])"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="subject" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="genresTyp">
+        <xs:sequence>
+            <xs:element type="muza:genreTyp" name="genre" maxOccurs="unbounded">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="genreTyp">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="genre_id">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="rap"/>
+                            <xs:enumeration value="rock"/>
+                            <xs:enumeration value="funk"/>
+                            <xs:enumeration value="blues"/>
+                            <xs:enumeration value="jazz"/>
+                            <xs:enumeration value="metal"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="artistsTyp">
+        <xs:sequence>
+            <xs:element type="muza:artistTyp" name="artist" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="artistTyp">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="artist_id">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="RollingStones"/>
+                            <xs:enumeration value="BlackSabbath"/>
+                            <xs:enumeration value="ChuckBerry"/>
+                            <xs:enumeration value="JudasPriest"/>
+                            <xs:enumeration value="TheBeatles"/>
+                            <xs:enumeration value="Eminem"/>
+                            <xs:enumeration value="LittleBig"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="owned_albumsTyp">
+        <xs:sequence>
+            <xs:element type="muza:CDtyp" name="CD" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="CDtyp">
+        <xs:sequence>
+            <xs:element name="title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="muza:release_datesTyp" name="release_dates"/>
+            <xs:element name="nr_of_songs">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="album_length">
+                <xs:simpleType>
+                    <xs:restriction base="xs:time">
+                        <xs:minInclusive value="00:00:01"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="muza:songsTyp" name="songs"/>
+            <xs:element type="muza:pricesTyp" name="prices"/>
+            <xs:element name="metacritics">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="100"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="publisher">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+
+        <xs:attribute name="artist_id">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="RollingStones"/>
+                    <xs:enumeration value="BlackSabbath"/>
+                    <xs:enumeration value="ChuckBerry"/>
+                    <xs:enumeration value="JudasPriest"/>
+                    <xs:enumeration value="TheBeatles"/>
+                    <xs:enumeration value="Eminem"/>
+                    <xs:enumeration value="LittleBig"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="genre_id">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="rap"/>
+                    <xs:enumeration value="rock"/>
+                    <xs:enumeration value="funk"/>
+                    <xs:enumeration value="blues"/>
+                    <xs:enumeration value="jazz"/>
+                    <xs:enumeration value="metal"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="release_datesTyp">
+        <xs:sequence>
+            <xs:element type="muza:release_dateTyp" name="release_date" maxOccurs="4"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="release_dateTyp">
+        <xs:simpleContent>
+            <xs:extension base="muza:resdate">
+                <xs:attribute name="nation">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="ENG"/>
+                            <xs:enumeration value="PL"/>
+                            <xs:enumeration value="DE"/>
+                            <xs:enumeration value="USA"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="resdate">
+        <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+
+    <xs:complexType name="songsTyp">
+        <xs:sequence>
+            <xs:element type="muza:songTyp" name="song" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="songTyp">
+        <xs:sequence>
+            <xs:element name="name">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength  value="40"/>
+                        <xs:whiteSpace value="preserve"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="song_length">
+                <xs:simpleType>
+                    <xs:restriction base="xs:time">
+                        <xs:minInclusive value="00:00:01"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pricesTyp">
+        <xs:sequence>
+            <xs:element type="muza:priceTyp" name="price" maxOccurs="4"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="priceTyp">
+        <xs:simpleContent>
+            <xs:extension base="muza:resprice">
+                <xs:attribute name="currency">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="GBP"/>
+                            <xs:enumeration value="PLN"/>
+                            <xs:enumeration value="EURO"/>
+                            <xs:enumeration value="DOLLAR"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="resprice">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.1"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
