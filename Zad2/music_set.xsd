@@ -45,12 +45,12 @@
 
     <xs:group name="header_grp">
         <xs:sequence>
-            <xs:element name="project_name" type="xs:string" maxOccurs="unbounded"/>
-            <xs:element name="author" type="xs:string" maxOccurs="unbounded"/>
-            <xs:element name="index" maxOccurs="unbounded">
+            <xs:element name="project_name" type="xs:string" />
+            <xs:element name="author" type="xs:string" maxOccurs="2"/>
+            <xs:element name="index" maxOccurs="2">
                 <xs:simpleType>
-                    <xs:restriction base="xs:integer">
-                        <xs:pattern value="([1-9][0-9][0-9][0-9][0-9][0-9])"/>
+                    <xs:restriction base="xs:nonNegativeInteger">
+                        <xs:pattern value="([2][0-9][0-9][0-9][0-9][0-9])"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -130,7 +130,7 @@
             <xs:element type="muza:release_datesTyp" name="release_dates"/>
             <xs:element name="nr_of_songs">
                 <xs:simpleType>
-                    <xs:restriction base="xs:integer">
+                    <xs:restriction base="xs:positiveInteger">
                         <xs:minInclusive value="1"/>
                     </xs:restriction>
                 </xs:simpleType>
