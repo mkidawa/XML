@@ -1,0 +1,85 @@
+_____________________________________________________________________________________________________________
+|   Nazwa albumu     |  Gatunek  | Data wydania w Polsce |  Ocena  |   Dlugosc albumu |       Wydawca       | 
+|********************|***********|***********************|*********|******************|*********************|
+    Let it Bleed          Rock           1999-02-15          91%       00:42:21 minut     Olympic Studios
+------------------------------------------------------------------------------------------------------------|
+      Piosenka                            Dlugosc
+    Gimme Shelter                         00:04:31
+    Country Honk                          00:04:19
+    Love in Vain                          00:03:09
+    Live with Me                          00:03:33
+    Let it Bleed                          00:05:26
+    Midnight Rambler                      00:06:52
+    You Got the Silver                    00:02:51
+    Monkey Man                            00:04:12
+    You Can't Always Get What You Want    00:07:28
+
+------------------------------------------------------------------------------------------------------------|
+
+
+
+_____________________________________________________________________________________________________________
+|   Nazwa albumu     |  Gatunek  | Data wydania w Polsce |  Ocena  |   Dlugosc albumu |       Wydawca       | 
+|********************|***********|***********************|*********|******************|*********************|
+    British Steel         Metal          1985-07-30          87%       00:36:10 minut     Columbia Records
+------------------------------------------------------------------------------------------------------------|
+      Piosenka                            Dlugosc
+    Rapid Fire                            00:04:08
+    Metal Gods                            00:04:00
+    Breaking the Law                      00:02:35
+    Grinder                               00:03:58
+    United                                00:03:35
+    You Don't Have to Be Old to Be Wise   00:05:04
+    Living After Midnight                 00:03:31
+    The Rage                              00:04:44
+    Steeler                               00:04:30
+
+------------------------------------------------------------------------------------------------------------|
+
+
+
+_____________________________________________________________________________________________________________
+|   Nazwa albumu     |  Gatunek  | Data wydania w Polsce |  Ocena  |   Dlugosc albumu |       Wydawca       | 
+|********************|***********|***********************|*********|******************|*********************|
+    Kamikaze              Rap            2018-09-19          62%       00:45:49 minut     Aftermath
+------------------------------------------------------------------------------------------------------------|
+      Piosenka                            Dlugosc
+    The Ringer                            00:05:37
+    Greatest                              00:03:46
+    Lucky You                             00:04:04
+    Paul                                  00:00:35
+    Normal                                00:03:42
+    Em Calls Pau                          00:00:49
+    Stepping Stone                        00:05:09
+    Not Alike                             00:04:48
+    Kamikaze                              00:03:36
+    Fall                                  00:03:36
+    Nice Guy                              00:02:30
+    Good Guy                              00:02:22
+    Venom                                 00:04:29
+
+------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
+                Podsumowanie:
+___________________________________________________
+
+Liczba albumów: 3
+Laczna liczba piosenek: 31
+Liczba albumów rockowych: 1
+Liczba albumów rapowych: 1
+Liczba albumów bluesowych: 0
+Liczba albumów funkowych: 0
+Liczba albumów jazzowych: 0
+Liczba albumów metalowych: 1
+Najwyższa ocena albumu: 91%
+Najwyżej oceniany album: Let it Bleed
+Należność w PLN za zamówienie: 113.34zł
+Należność w GBP za zamówienie: 23.5£
+Należność w EURO za zamówienie: 31.5€
+Należność w USD za zamówienie: 36.5$
+VAT odprowadzony od zamówienia: 26zł
+Data Raportu: 04-12-2018
